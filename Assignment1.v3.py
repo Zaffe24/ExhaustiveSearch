@@ -165,7 +165,7 @@ It is exploited by the optimization.curve_fit() function to produce a good appro
 The total complexity of the algorithm is polynomial thanks to the boundaries we set for the searching.'''
 
 
-def expo(x, a):
+def poly(x, a):
     return a * x ** 2  # complexity is polynomial
 
 
@@ -184,4 +184,4 @@ if __name__ == '__main__':
     times = DataSets(Set)  # running times produced by testing the Set list
     printPairs(Set, times)
     print()
-    print(optimization.curve_fit(expo, Set, times))  # approximation of the algorithm's behaviour
+    print(optimization.curve_fit(poly, Set, times))  # approximation of the algorithm's behaviour
